@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1709110607403896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4354928128601654}
+  - component: {fileID: 114873256530183810}
+  - component: {fileID: 114782714762054856}
+  - component: {fileID: 114297020107237772}
+  m_Layer: 0
+  m_Name: GameControllerTerrain
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4354928128601654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709110607403896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114873256530183810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709110607403896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de381048e5a1914cada112d6c83f4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraHolder: {fileID: 0}
+  cameraRotate: 0
+  playerObject: {fileID: 114300906824884244, guid: 67b4aed05ba6cdc4cb768ab5d8518587, type: 3}
+  directionalControls: 0
+  groundObject: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundTextureSpeed: -0.1
+  startDelay: 0.5
+  readyGoEffect: {fileID: 22485230, guid: bb9a98ac00266624ea79c0f47823def5, type: 3}
+  score: 0
+  scorePerSecond: 1
+  scoreText: {fileID: 0}
+  moneyPlayerPrefs: Money
+  shopMenu: {fileID: 0}
+  steeringWheel: {fileID: 0}
+  gameCanvas: {fileID: 0}
+  healthCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+  mainMenuLevelName: ECCGameTerrain
+  soundGameOver: {fileID: 0}
+  soundSourceTag: Sound
+  confirmButton: Submit
+  pauseButton: Cancel
+--- !u!114 &114782714762054856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709110607403896}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a5e949cefcdec4fbc027912274b8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAroundTag: Player
+  isSpawning: 0
+  spawnGroups:
+  - spawnObjects:
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4941441341357990, guid: d59b1a157fd902544a0634e563969315, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4941441341357990, guid: d59b1a157fd902544a0634e563969315, type: 3}
+    - {fileID: 4000013324394496, guid: 4f426d30c8562d54288b9bc1dbadd1d7, type: 3}
+    spawnRate: 3
+    spawnObjectDistance: {x: 10, y: 15}
+  - spawnObjects:
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4110973972574062, guid: 42f666a98fe75af4293c13dcdf330fcf, type: 3}
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4126353118113974, guid: 00453729d87fdd24fb87b501eae7711e, type: 3}
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4139512482711386, guid: 052f5027c569dd7489e5c74d8a4e6c4c, type: 3}
+    - {fileID: 4139512482711386, guid: fdb9588874f952d4695281820e076673, type: 3}
+    spawnRate: 5
+    spawnObjectDistance: {x: 25, y: 40}
+  - spawnObjects:
+    - {fileID: 4489980074315094, guid: da2c113cb8c768a41b5a444d34e50457, type: 3}
+    - {fileID: 4185046365512272, guid: 07f52060a48da7e4aad4ce29ee32da75, type: 3}
+    spawnRate: 5
+    spawnObjectDistance: {x: 35, y: 50}
+--- !u!114 &114297020107237772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709110607403896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f75f3e3708e21541859db2effdb1bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnNearTag: Player
+  spawnIndexDistance: 0
+  isSpawning: 0
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnGroups:
+  - spawnObjects:
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4941441341357990, guid: d59b1a157fd902544a0634e563969315, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4405878449484530, guid: d896189ae26fc834eae1470a4c477096, type: 3}
+    - {fileID: 4941441341357990, guid: d59b1a157fd902544a0634e563969315, type: 3}
+    - {fileID: 4000013324394496, guid: 4f426d30c8562d54288b9bc1dbadd1d7, type: 3}
+    spawnRate: 3
+    spawnObjectDistance: {x: 0, y: 3}
+  - spawnObjects:
+    - {fileID: 4139512482711386, guid: b0faf8d8e4ee621478468eebfca92638, type: 3}
+    spawnRate: 5
+    spawnObjectDistance: {x: 0, y: 3}
