@@ -14,7 +14,9 @@ public class EnemyController : MonoBehaviour
     private bool isStay = false;
     private bool stopCo = false;
     public bool readyToRun = false;
-    private bool cam = false;
+    public bool cam = false;
+    public GameObject ballTwoController;
+    private CapsuleCollider _capsuleCollider;
     private void OnTriggerEnter(Collider other)
     {
         isHit = true;
@@ -24,6 +26,11 @@ public class EnemyController : MonoBehaviour
             enemyanimator.SetBool("IsHitted", true);
             Debug.Log("#5 물체와 충돌");
             isStay = true;
+            if (ballTwoController != null)
+            {
+                ballTwoController.GetComponent<BallTwoController>().BallFalse();
+            }
+            
         }
     }
     private void Update()
@@ -32,6 +39,8 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log("#9 플레이어 카메라 온");
             cameraController.GetComponent<CameraController>().SwitchCamLookDownCamToOverCam(); //on / off
+            _capsuleCollider = GetComponent<CapsuleCollider>();
+            _capsuleCollider.isTrigger = false;
         }
         if (stopCo)
         {
@@ -57,4 +66,6 @@ public class EnemyController : MonoBehaviour
         stopCo = true;
         isStay = false;
     }
+    
+    
 }  

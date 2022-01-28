@@ -37,7 +37,11 @@ public class BallController : MonoBehaviour
          //Debug.Log("aaaa");
          cameraController.GetComponent<CameraController>().SwitchCameraFirstCamToballCam();
          //Debug.Log("공던지는 함수 호출");
-         ballTwoController.GetComponent<BallTwoController>().BallTwo(); //balltwo 함수호출
+         if (ballTwoController != null)
+         {
+            ballTwoController.GetComponent<BallTwoController>().BallTwo(); //balltwo 함수호출
+         }
+         
       }
 
    }

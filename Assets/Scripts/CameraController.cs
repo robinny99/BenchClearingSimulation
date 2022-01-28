@@ -31,6 +31,8 @@ public class CameraController : MonoBehaviour
    }
    public void SwitchCamLookDownCamToOverCam()
    {
+       firstStepCamera.enabled = false;
+      ballCamera.enabled = false;
       lookDownCam.enabled = false;
       overViewCamera.enabled = true; //카메라전환
 
