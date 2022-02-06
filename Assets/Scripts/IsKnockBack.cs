@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class IsKnockBack : MonoBehaviour
 {
-    public Animator playerAnimator;
-    private void OnTriggerEnter(Collider other)
-    {
-        playerAnimator.SetTrigger("IsKnockBack");
-    }
+
 }
+

@@ -22,21 +22,16 @@ public class BallController : MonoBehaviour
          StartCoroutine(WaitForOne());
       }
 
-      if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pitching")) //Idle이 아닐 때 조건문
+      if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pitching")) //Pitching 일때 조건문
       {
          enemyAnimator.SetBool("IsReady", true); //준비파라미터 ISREADY
-        
-         
-         //Debug.Log("Idle애니메이션 끝");
          playerAnimator.SetBool("startFlag", false);
       } 
       
       if (isReadyToThrow)
       {
          StopCoroutine(WaitForOne());
-         //Debug.Log("aaaa");
          cameraController.GetComponent<CameraController>().SwitchCameraFirstCamToballCam();
-         //Debug.Log("공던지는 함수 호출");
          if (ballTwoController != null)
          {
             ballTwoController.GetComponent<BallTwoController>().BallTwo(); //balltwo 함수호출

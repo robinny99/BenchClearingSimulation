@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class BatHide : MonoBehaviour
 {
-    public GameObject enemy;
-    private void Update()
+    public bool isDied = false;
+    public Animator playerAnimator;
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (enemy.GetComponent<EnemyController>().cam)
+        if (other.gameObject.tag == "Player")
         {
-            gameObject.SetActive(false);
+            playerAnimator.SetTrigger("IsKnockBack");
+            Debug.Log("빠따에 맞았따!");
+            isDied = true;
         }
+
+        
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TargetPlayer : MonoBehaviour
 {
-    public GameObject player;
+    /*public GameObject player;
     public GameObject enemy;
     private void Update()
     {
@@ -19,5 +19,5 @@ public class TargetPlayer : MonoBehaviour
     void LookPlayer()
     {
         transform.LookAt(player.transform);
-    }
+    }*/
 }

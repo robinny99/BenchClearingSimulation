@@ -7,6 +7,9 @@ TagManager:
   - Sound
   - Music
   - enemy
+  - Ball
+  - Blue
+  - Bat
   layers:
   - Default
   - TransparentFX
