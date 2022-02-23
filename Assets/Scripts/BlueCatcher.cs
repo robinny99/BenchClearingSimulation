@@ -9,10 +9,12 @@ public class BlueCatcher : MonoBehaviour
     public GameObject enemy;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Ball" || other.gameObject.tag == "Bat")
+        blueCatherAnimator.SetBool("IsDead" , true);
+        
+        /*if (other.gameObject.tag == "enemy" || other.gameObject.tag == "Player" || other.gameObject.tag == "Ball" || other.gameObject.tag == "Bat")
         {
-            blueCatherAnimator.SetBool("IsDead" , true);
-        }
+            
+        }*/
     }
 
     private void Update()

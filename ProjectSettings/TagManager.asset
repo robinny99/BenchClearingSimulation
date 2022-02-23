@@ -10,6 +10,7 @@ TagManager:
   - Ball
   - Blue
   - Bat
+  - Structure
   layers:
   - Default
   - TransparentFX
@@ -17,13 +18,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HBall
+  - Player
+  - RedBatMan
+  - Bat
+  - Plane
+  - AttackBall
+  - Pitcher
   - 
   - 
   - 

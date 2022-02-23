@@ -18,6 +18,7 @@ public class BallController : MonoBehaviour
    {
       if (Input.GetMouseButtonDown(0))
       {
+         Debug.Log("AAAAAAA");
          playerAnimator.SetBool("startFlag", true); //플레이어 피칭 애니메이션온
          StartCoroutine(WaitForOne());
       }
@@ -45,7 +46,6 @@ public class BallController : MonoBehaviour
    IEnumerator WaitForOne()
    {
       yield return new WaitForSeconds(1.0f);
-      Debug.Log("1.0초지남");
       isReadyToThrow = true;
    }
 }
