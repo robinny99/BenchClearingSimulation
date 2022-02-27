@@ -9,9 +9,14 @@ public class RedBatterController : MonoBehaviour
     public GameObject player;
     public Animator redBatter;
     private bool trig;
-    
 
     public float speed;
+    
+    private Vector3 moveVec;
+
+    private bool isAttack = true;
+    
+    public Transform spawner;
     private void OnTriggerEnter(Collider other)
     {
         /*if (other.gameObject.tag == "Ball")
@@ -19,6 +24,22 @@ public class RedBatterController : MonoBehaviour
             trig = true;
             redBatter.SetTrigger("IsHit");
         }*/
+        /*if (other.gameObject.tag != "Structure")
+        {
+            redBatter.SetTrigger("IsDead");
+            cantMove = false;
+        }*/
+        
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Blue")
+        {
+            redBatter.SetTrigger("IsDead");
+            transform.Translate(Vector3.zero);
+            trig = false;
+            Debug.Log("맞아서 쓰러짐");
+
+            redBatter.SetBool("IsRevive", false);
+            StartCoroutine(Revive());
+        }
     }
 
     private void Update()
@@ -27,6 +48,23 @@ public class RedBatterController : MonoBehaviour
         {
             trig = true;
             redBatter.SetTrigger("IsNotHit");
+            
+            if (redBatter.GetCurrentAnimatorStateInfo(0).IsName("Run") &&
+                redBatter.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
+            {
+                isAttack = true;
+            }
+            if (redBatter.GetCurrentAnimatorStateInfo(0).IsName("Attack") &&
+                redBatter.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
+            {
+                isAttack = false;
+            }
+            if (redBatter.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
+                redBatter.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
+            {
+                isAttack = false;
+                transform.LookAt(Vector3.forward);
+            }
         }
     }
 
@@ -34,7 +72,15 @@ public class RedBatterController : MonoBehaviour
     {
         if (trig)
         {
-            Attack();
+            if (isAttack)
+            {
+                Attack();
+            }
+            else
+            {
+                moveVec = new Vector3(0, 0, 0).normalized;
+                transform.position += moveVec;
+            }
         }
     }
 
@@ -71,5 +117,12 @@ public class RedBatterController : MonoBehaviour
             transform.Translate(Vector3.forward * speed);
             transform.LookAt(player.transform);
         }
+    }
+    IEnumerator Revive()
+    {
+        yield return new WaitForSeconds(3f);
+        redBatter.SetBool("IsRevive", true);
+        transform.position = spawner.position;
+        yield break;
     }
 }

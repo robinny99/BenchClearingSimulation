@@ -18,8 +18,8 @@ public class EnemyController : MonoBehaviour
     public bool cam = false;
     public GameObject ballTwoController;
     public GameObject player;
-    
-    
+
+
     public bool posuKnockback;
     //public Rigidbody enemyRb;
     //public float runSpeed = 10.0f;
@@ -42,6 +42,7 @@ public class EnemyController : MonoBehaviour
                     ballTwoController.GetComponent<BallTwoController>().BallFalse();
                 }
                 isHit = false;
+                StartCoroutine(Disappear());
             }
         }
     }
@@ -72,6 +73,7 @@ public class EnemyController : MonoBehaviour
         cameraController.GetComponent<CameraController>().SwitchCamLookDownCamToOverCam(); //on / off
         stopCo = true;
         isStay = false;
+        
     }
 
     /*public void Attack()
@@ -105,4 +107,12 @@ public class EnemyController : MonoBehaviour
             transform.LookAt(player.transform);
         }
     }*/
+    
+    IEnumerator Disappear()
+    {
+        yield return new WaitForSeconds(3f);
+        
+        yield break;
+        
+    }
 }

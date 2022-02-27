@@ -52,6 +52,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
+--- !u!114 &2051590310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828250033620684852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506c6f10b51bf3747835f3bfb79304e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6257036434631758068}
+  playerPosition: {fileID: 0}
+  IsStartAttack: 0
 --- !u!1 &5216225484680460519
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,27 +187,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7767138
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7299957
+      value: 4.609993
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -372,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_TagString
-      value: enemy
+      value: Judge
       objectReference: {fileID: 0}
     - target: {fileID: 1130344971776386662, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_IsActive
@@ -508,5 +523,10 @@ GameObject:
 --- !u!4 &15016755975604878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
+  m_PrefabInstance: {fileID: 558412086584520037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6257036434631758068 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
   m_PrefabInstance: {fileID: 558412086584520037}
   m_PrefabAsset: {fileID: 0}

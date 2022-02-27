@@ -10,21 +10,29 @@ public class EnemyNoBatter : MonoBehaviour
     public Animator _animator;
     public bool trigger;
     public float speed;
-    public bool isDead;
+    private bool isAttack = true;
+    
+    private Vector3 moveVec;
+
+    public Transform spawner;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Blue")
         {
             _animator.SetTrigger("IsDead");
-            isDead = true;
+            transform.Translate(Vector3.zero);
+            isAttack = false;
+            _animator.SetBool("IsRevive", false);
+            StartCoroutine(Revive());
         }
 
-        if (other.gameObject.tag == "enemy")
+        /*if (other.gameObject.tag == "enemy")
         {
             _animator.SetTrigger("IsKnockback");
-            transform.LookAt(other.transform.position - transform.position);
-        }
+            transform.LookAt(other.transform.position);
+            transform.Translate(Vector3.back * Time.deltaTime);
+        }*/
     }
 
     private void Update()
@@ -33,12 +41,6 @@ public class EnemyNoBatter : MonoBehaviour
         {
             _animator.SetTrigger("IsStart");
             trigger = true;
-
-            if (isDead)
-            {
-                transform.Translate(Vector3.zero);
-                Debug.Log("멈춤");
-            }
         }
     }
 
@@ -46,9 +48,14 @@ public class EnemyNoBatter : MonoBehaviour
     {
         if (trigger)
         {
-            if (isDead != true)
+            if (isAttack)
             {
                 Attack();
+            }
+            else
+            {
+                moveVec = new Vector3(0, 0, 0).normalized;
+                transform.position += moveVec;
             }
 
             if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") &&
@@ -84,7 +91,6 @@ public class EnemyNoBatter : MonoBehaviour
                 if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     transform.Translate(Vector3.forward * speed);
-                    transform.LookAt(player.transform);
                 }
             }
             else
@@ -93,5 +99,13 @@ public class EnemyNoBatter : MonoBehaviour
                 transform.LookAt(player.transform);
             }
         }
+    }
+
+    IEnumerator Revive()
+    {
+        yield return new WaitForSeconds(3f);
+        _animator.SetBool("IsRevive", true);
+        transform.position = spawner.position;
+        yield break;
     }
 }
