@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy;
     public GameObject target;
+
+    private void Awake()
+    {
+        gameObject.GetComponent<EnemySpawner>().enabled = false;
+    }
 
     private void Start()
     {
@@ -14,11 +18,9 @@ public class EnemySpawner : MonoBehaviour
     }
     IEnumerator aaa()
     {
-        yield return new WaitForSeconds(5.0f);
-        if (enemy.GetComponent<EnemyController>().cam)
-        {
-            Debug.Log("인스턴스 4마리 소환");
-            Instantiate(target, transform.position,transform.rotation);
+        while (true) {
+            Instantiate (target, transform.position, transform.rotation);
+            yield return new WaitForSeconds (10.0f);
         }
     }
 }

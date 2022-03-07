@@ -24,7 +24,7 @@ public class JudgeController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" ||other.gameObject.tag == "Blue" ||other.gameObject.tag == "enemy")
         {
             IsStartAttack = true;
         }

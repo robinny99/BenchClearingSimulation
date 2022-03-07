@@ -16,29 +16,14 @@ public class RedBatterController : MonoBehaviour
 
     private bool isAttack = true;
     
-    public Transform spawner;
+    //public Transform spawner;
     private void OnTriggerEnter(Collider other)
     {
-        /*if (other.gameObject.tag == "Ball")
-        {
-            trig = true;
-            redBatter.SetTrigger("IsHit");
-        }*/
-        /*if (other.gameObject.tag != "Structure")
-        {
-            redBatter.SetTrigger("IsDead");
-            cantMove = false;
-        }*/
-        
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Blue")
+        if (other.gameObject.tag == "whiteBat")
         {
             redBatter.SetTrigger("IsDead");
             transform.Translate(Vector3.zero);
             trig = false;
-            Debug.Log("맞아서 쓰러짐");
-
-            redBatter.SetBool("IsRevive", false);
-            StartCoroutine(Revive());
         }
     }
 
@@ -64,6 +49,7 @@ public class RedBatterController : MonoBehaviour
             {
                 isAttack = false;
                 transform.LookAt(Vector3.forward);
+                StartCoroutine(DisAppear());
             }
         }
     }
@@ -118,11 +104,11 @@ public class RedBatterController : MonoBehaviour
             transform.LookAt(player.transform);
         }
     }
-    IEnumerator Revive()
+
+    IEnumerator DisAppear()
     {
-        yield return new WaitForSeconds(3f);
-        redBatter.SetBool("IsRevive", true);
-        transform.position = spawner.position;
+        yield return new WaitForSeconds(5f);
+        gameObject.SetActive(false);
         yield break;
     }
 }

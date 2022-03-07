@@ -12,33 +12,28 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 1.0f;
     public Animator playerAnimator;
+    public GameObject whiteBat;
     private EnemyController enemyController;
 
     private bool isTouch = false;
     private bool a = true;
-    
+    private bool isDead;
+
     private void Start()
     {
+        whiteBat.SetActive(false);
         playerAnimator = GetComponentInChildren<Animator>();
         enemyController = GameObject.Find("EnemyBetterChildren").GetComponent<EnemyController>();
     }
 
-    //private void Update()
-    //{
-        /*if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Knockback") &&
-            playerAnimator.GetCurrentAnimatorStateInfo(1).normalizedTime >= 0f)
+    private void Update()
+    {
+        if (playerAnimator.GetCurrentAnimatorStateInfo(2).IsName("BatAttack") &&
+            playerAnimator.GetCurrentAnimatorStateInfo(2).normalizedTime >= 0f)
         {
-            Debug.Log("넉백애니메이션이 실행중 aa");
             CantMove();
         }
-
-        if (playerAnimator.GetCurrentAnimatorStateInfo(1).IsName("Knockback") &&
-            playerAnimator.GetCurrentAnimatorStateInfo(1).normalizedTime >= 0.5f)
-        {
-            playerAnimator.SetBool("aaa", false);
-            Debug.Log("피격상태가아님");
-        }*/
-    //}
+    }
 
     private void FixedUpdate()
     {
@@ -46,14 +41,26 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isTouch)
             {
+                playerAnimator.SetTrigger("IsKnockBack");
                 CantMove();
             }
             else
             {
+                if (Input.GetKey(KeyCode.Space) && whiteBat.activeSelf)
+                {
+                    playerAnimator.SetTrigger("IsAttack");
+                    playerAnimator.SetLayerWeight(2, 1);
+                }
+                else
+                {
+                    playerAnimator.SetLayerWeight(2, 0);
+                }
                 Move();
                 Turn();
                 PlayerAnimation();
             }
+            
+
         }
     }
 
@@ -80,9 +87,14 @@ public class PlayerMovement : MonoBehaviour
     void PlayerAnimation()
     {
 
-        if (hAxis == 0 && vAxis == 0 || hAxis == null || vAxis == null)
+        if (hAxis == 0 && vAxis == 0 || hAxis == null || vAxis == null || ( hAxis == null && vAxis == null))
         {
             playerAnimator.SetBool("IsRun", false);
+
+            if (isDead)
+            {
+                
+            }
         }
         else
         {
@@ -94,39 +106,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (enemyController.GetComponent<EnemyController>().cam)
         {
-            if (other.gameObject.tag != "Structure")
+            if (other.gameObject.tag == "enemy" || other.gameObject.tag == "Judge")
             {
                 Debug.Log("플레이어에 닿은 오브젝트 이름 : " + other.gameObject.name);
                 playerAnimator.SetTrigger("IsKnockBack");
                 isTouch = true;
             }
         }
-
-        /*
-        if (other.gameObject.tag == "Blue")
-        {
-            playerAnimator.SetBool("aaa", true);
-            moveVec = new Vector3(0, 0, 0).normalized;
-            transform.position += moveVec;
-            Vector3 reactVec = transform.position - other.transform.position;
-            StartCoroutine("knockback", reactVec);
-            a = false;
-        }*/
     }
-
-    /*
-    IEnumerator knockback(Vector3 reactVec)
-    {
-
-        Debug.Log("넉백중 뒤로 물러남");
-        reactVec = reactVec.normalized;
-        reactVec = Vector3.up;
-        playerRigidbody.AddForce(reactVec * backSpace, ForceMode.Impulse);
-        //reactVec = Vector3.zero;
-        yield return new WaitForSeconds(0.8f);
-        a = true;
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        
-    }*/
-    
 }

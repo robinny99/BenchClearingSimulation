@@ -68,7 +68,8 @@ MonoBehaviour:
   player: {fileID: 0}
   _animator: {fileID: 7572118768969418940}
   trigger: 0
-  speed: 0.06
+  speed: 0.03
+  spawner: {fileID: 0}
 --- !u!1 &5216225484794215944
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.7
+      value: -29.91708
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -209,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.5
+      value: -33.270004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -385,7 +386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_Name
-      value: EnemyNoBatter
+      value: EnemyNoBatter (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_TagString

@@ -18,21 +18,12 @@ public class EnemyNoBatter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Blue")
+        if (other.gameObject.tag == "WhiteBat")
         {
             _animator.SetTrigger("IsDead");
             transform.Translate(Vector3.zero);
             isAttack = false;
-            _animator.SetBool("IsRevive", false);
-            StartCoroutine(Revive());
         }
-
-        /*if (other.gameObject.tag == "enemy")
-        {
-            _animator.SetTrigger("IsKnockback");
-            transform.LookAt(other.transform.position);
-            transform.Translate(Vector3.back * Time.deltaTime);
-        }*/
     }
 
     private void Update()
@@ -63,6 +54,13 @@ public class EnemyNoBatter : MonoBehaviour
             {
                 transform.LookAt(player.transform);
                 transform.Translate(Vector3.zero);
+            }
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
+                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
+            {
+                isAttack = false;
+                transform.LookAt(Vector3.forward);
+                DisAppear();
             }
         }
 
@@ -100,12 +98,10 @@ public class EnemyNoBatter : MonoBehaviour
             }
         }
     }
-
-    IEnumerator Revive()
+    IEnumerator DisAppear()
     {
-        yield return new WaitForSeconds(3f);
-        _animator.SetBool("IsRevive", true);
-        transform.position = spawner.position;
+        yield return new WaitForSeconds(5f);
+        gameObject.SetActive(false);
         yield break;
     }
 }

@@ -140,7 +140,7 @@ MonoBehaviour:
   targetEnemy: {fileID: 0}
   EnemyBatterChildren: {fileID: 0}
   _animator: {fileID: 1055509310598521402}
-  speed: 0.05
+  isRE: 0
 --- !u!195 &1129675913147669951
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: -38.130447
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.48
+      value: -4.1867332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -681,7 +681,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cad65befacb34d94cbd3fd48b8c9aca2, type: 2}
+      objectReference: {fileID: 9100000, guid: 986dd64117b91f344a07d221b0a057ef, type: 2}
     - target: {fileID: 5866666021909216657, guid: 8bf6357bcf4d49e982ba11bc55b1f1ba, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1

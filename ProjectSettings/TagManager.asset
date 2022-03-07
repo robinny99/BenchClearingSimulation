@@ -12,11 +12,13 @@ TagManager:
   - Bat
   - Structure
   - Judge
+  - WhiteBat
+  - Item
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - WhiteBat
   - Water
   - UI
   - HBall
@@ -26,7 +28,7 @@ TagManager:
   - Plane
   - AttackBall
   - Pitcher
-  - 
+  - Item
   - 
   - 
   - 

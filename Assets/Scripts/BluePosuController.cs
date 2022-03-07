@@ -9,52 +9,31 @@ public class BluePosuController : MonoBehaviour
     public GameObject EnemyBatterChildren;
     public Animator _animator;
     private bool isAttack;
-    public float speed;
-
-    public Transform spawner;
-    
     private Vector3 moveVec;
 
     private void Update()
     {
-               
-    
         if (EnemyBatterChildren.GetComponent<EnemyController>().posuKnockback)
         {
-            Debug.Log("넉백 시작");
-           _animator.SetTrigger("IsStart");
+            _animator.SetBool("IsStart", true);
 
-           if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Run") &&
-               _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
-           {
-               isAttack = true;
-           }
-           
-           if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
-               _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
-           {
-               isAttack = false;
-               transform.LookAt(Vector3.forward);
-           }
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && //뛰는 애니메이션이 실행되고 있을 때
+                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
+            {
+                isAttack = true;
+            }
         }
 
         if (isAttack)
         {
-            if (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Die"))
-            {
-                Attack();   
-            }
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
-                _animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0f)
-            {
-                isAttack = false;
-                transform.LookAt(Vector3.forward);
-            }
+            Attack();
         }
-        if (isAttack != true)
+
+        if (isAttack != true) //죽었을 떄
         {
-            moveVec = new Vector3(0, 0, 0).normalized;
+            moveVec = new Vector3(0, 0, 0).normalized; //움직임 고정
             transform.position += moveVec;
+            transform.LookAt(Vector3.forward);
         }
     }
 
@@ -63,10 +42,9 @@ public class BluePosuController : MonoBehaviour
         float distance = Vector3.Distance(transform.position, targetEnemy.transform.position);
         if (distance <= 3f)
         {
-            _animator.SetTrigger("IsAttack");
             transform.LookAt(targetEnemy.transform.position);
         }
-        else if(distance >3f)
+        else if (distance > 3f)
         {
             /*transform.Translate(Vector3.forward * speed);*/
             transform.LookAt(targetEnemy.transform.position);
@@ -75,24 +53,11 @@ public class BluePosuController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.tag != "Structure" || other.gameObject.tag != "Blue")
+        if (other.gameObject.tag == "WhiteBat") //지형, 파란색유닛 제외
         {
-            isAttack = false;
             _animator.SetTrigger("IsDead");
-            transform.LookAt(Vector3.forward); //보는것 반대로 넘어져 죽음
-            _animator.SetBool("IsRevive", false);
-            StartCoroutine(Revive());
+            isAttack = false;
+            transform.LookAt(Vector3.forward);
         }
-
-        
-    }
-    
-    IEnumerator Revive()
-    {
-        yield return new WaitForSeconds(2.5f);
-        _animator.SetBool("IsRevive", true);
-        transform.position = spawner.position;
-        yield break;
     }
 }
