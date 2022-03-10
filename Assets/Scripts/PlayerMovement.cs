@@ -12,16 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveSpeed = 1.0f;
     public Animator playerAnimator;
-    public GameObject whiteBat;
     private EnemyController enemyController;
 
-    private bool isTouch = false;
+    public bool isTouch = false;
     private bool a = true;
     private bool isDead;
 
     private void Start()
     {
-        whiteBat.SetActive(false);
         playerAnimator = GetComponentInChildren<Animator>();
         enemyController = GameObject.Find("EnemyBetterChildren").GetComponent<EnemyController>();
     }
@@ -46,15 +44,6 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                if (Input.GetKey(KeyCode.Space) && whiteBat.activeSelf)
-                {
-                    playerAnimator.SetTrigger("IsAttack");
-                    playerAnimator.SetLayerWeight(2, 1);
-                }
-                else
-                {
-                    playerAnimator.SetLayerWeight(2, 0);
-                }
                 Move();
                 Turn();
                 PlayerAnimation();
@@ -91,10 +80,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("IsRun", false);
 
-            if (isDead)
+            /*if (isDead)
             {
                 
-            }
+            }*/
         }
         else
         {
@@ -104,11 +93,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (enemyController.GetComponent<EnemyController>().cam)
+        if (enemyController.cam)
         {
-            if (other.gameObject.tag == "enemy" || other.gameObject.tag == "Judge")
+            if (other.gameObject.tag == "enemy" || other.gameObject.tag == "Judge" || other.gameObject.tag == "blue")
             {
-                Debug.Log("플레이어에 닿은 오브젝트 이름 : " + other.gameObject.name);
                 playerAnimator.SetTrigger("IsKnockBack");
                 isTouch = true;
             }

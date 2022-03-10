@@ -11,6 +11,7 @@ public class TimeText : MonoBehaviour
    public float startTime;
    public Text text_Watch;
    
+
    private void Update()
    {
       if (enemy.GetComponent<EnemyController>().cam)
