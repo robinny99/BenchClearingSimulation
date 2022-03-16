@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float runningTime;
+    
     private float hAxis;
     private float vAxis;
 
@@ -15,24 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private EnemyController enemyController;
 
     public bool isTouch = false;
-    private bool a = true;
-    private bool isDead;
+    public bool isDead;
 
     private void Start()
     {
         playerAnimator = GetComponentInChildren<Animator>();
         enemyController = GameObject.Find("EnemyBetterChildren").GetComponent<EnemyController>();
     }
-
-    private void Update()
-    {
-        if (playerAnimator.GetCurrentAnimatorStateInfo(2).IsName("BatAttack") &&
-            playerAnimator.GetCurrentAnimatorStateInfo(2).normalizedTime >= 0f)
-        {
-            CantMove();
-        }
-    }
-
     private void FixedUpdate()
     {
         if (enemyController.readyToRun)
@@ -66,6 +57,8 @@ public class PlayerMovement : MonoBehaviour
         hAxis = Input.GetAxis("Horizontal");
         vAxis = Input.GetAxis("Vertical");
 
+       
+
     }
 
     void Turn()
@@ -76,17 +69,13 @@ public class PlayerMovement : MonoBehaviour
     void PlayerAnimation()
     {
 
-        if (hAxis == 0 && vAxis == 0 || hAxis == null || vAxis == null || ( hAxis == null && vAxis == null))
+        if (hAxis == 0 && vAxis == 0 || hAxis == null || vAxis == null || (hAxis == null && vAxis == null))
         {
             playerAnimator.SetBool("IsRun", false);
-
-            /*if (isDead)
-            {
-                
-            }*/
         }
         else
         {
+            runningTime += Time.deltaTime;
             playerAnimator.SetBool("IsRun", true);
         }
     }
@@ -99,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimator.SetTrigger("IsKnockBack");
                 isTouch = true;
+                isDead = true;
             }
         }
     }
