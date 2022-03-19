@@ -9,17 +9,27 @@ public class BallController : MonoBehaviour
    public Animator enemyAnimator;
    public GameObject ballTwoController;
    private bool isReadyToThrow = false;
+   private bool isReady;
    public GameObject cameraController;
    private void Awake()
    { 
       playerAnimator.SetBool("startFlag", false);  //1
    }
+
+   private void Start()
+   {
+      StartCoroutine(PitchingCo());
+   }
+
    void Update()
    {
-      if (Input.GetMouseButtonDown(0))
+      if (isReady)
       {
-         playerAnimator.SetBool("startFlag", true); //플레이어 피칭 애니메이션온
-         StartCoroutine(WaitForOne());
+         if (Input.GetMouseButtonDown(0))
+         {
+            playerAnimator.SetBool("startFlag", true); //플레이어 피칭 애니메이션온
+            StartCoroutine(WaitForOne());
+         }
       }
 
       if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Pitching")) //Pitching 일때 조건문
@@ -46,6 +56,14 @@ public class BallController : MonoBehaviour
    {
       yield return new WaitForSeconds(1.0f);
       isReadyToThrow = true;
+   }
+   
+   IEnumerator PitchingCo()
+   {
+      yield return new WaitForSeconds(3);
+
+      isReady = true;
+      yield break;
    }
 }
 

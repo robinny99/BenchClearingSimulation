@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7492945387889915893}
   - component: {fileID: 1036363942127365919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Judge 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7129012444738769171}
   - component: {fileID: 3476017567545063572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher Cap 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5276611880736456835}
   - component: {fileID: 7763533805786217730}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher Cap 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7532915364329802857}
   - component: {fileID: 6128773997878230803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher Cap 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1189635918249647586}
   - component: {fileID: 6249291636964567366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8765123664414994571}
   - component: {fileID: 4794503539647836723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Better 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1439648617709099301}
   - component: {fileID: 6814189112954899305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Judge 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082176501327762773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.foot.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7320596696194891437}
   - component: {fileID: 7978831270365715609}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7973297493379021956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3817284775325329453}
   - component: {fileID: 2670324826244143025}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Better 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6997133015055066604}
   - component: {fileID: 895171407901248812}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Cap Better 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2561069485040551248}
   - component: {fileID: 2676961048372819140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Catcher 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,7 +1337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4754356175086657850}
   - component: {fileID: 4764770192923231893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 216170566935468740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684743109067694043}
   - component: {fileID: 5697266397489255195}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Catcher 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1597,7 +1597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1862230968961917643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1630,7 +1630,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8310393897830221132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.forarm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1024132267214471282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.thumb.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1491223493044876913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.forarm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1724,7 +1724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750900001021417974}
   - component: {fileID: 134659519960454533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1838,7 +1838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930239000236351501}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.leg.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1870,7 +1870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7820166494673772035}
   - component: {fileID: 2629946865762777305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Catcher 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1985,7 +1985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35131240289758495}
   - component: {fileID: 7947005027976987697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher Cap 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2099,7 +2099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6198138653190396601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7884381528076593702}
   - component: {fileID: 9004721488241672566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Catcher 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4934382429650885325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2278,7 +2278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8397440965364491657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.thumb.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2310,7 +2310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 818903576530767418}
   - component: {fileID: 3939508095879819814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Cap Better 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2424,7 +2424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4682078818201769431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.thumb.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2455,7 +2455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6905913379155639880}
   - component: {fileID: 2756997787801905756}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Catcher 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2569,7 +2569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442330696603651019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2601,7 +2601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360833596855482983}
   - component: {fileID: 5874314988950611764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Catcher 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2716,7 +2716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948351716097601376}
   - component: {fileID: 1918006479530231599}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Better 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2831,7 +2831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5481187411305806958}
   - component: {fileID: 3903453307455505347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Catcher 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2946,7 +2946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5531955144001750227}
   - component: {fileID: 6832752699970980183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Cap Better 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3060,7 +3060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4535822039487925617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3092,7 +3092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066453760880093983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.toe.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3122,7 +3122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497381501495845496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3152,7 +3152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 255173084236939257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3183,7 +3183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3836638127121899092}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.toe.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3213,7 +3213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2389146607180369052}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.spine.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3245,7 +3245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5298777492767298445}
   - component: {fileID: 408323091740483344}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Judge 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3359,7 +3359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6524016801990855413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.foot.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3390,7 +3390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 78945950715998337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.spine.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3422,7 +3422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3636400335451808066}
   - component: {fileID: 5900635957757886655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Catcher 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3537,7 +3537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500330668191498176}
   - component: {fileID: 4492210404913690443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Judge 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3651,7 +3651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8958937244453502210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.leg.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3683,7 +3683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6816089265789979905}
   - component: {fileID: 1268647216862626086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Cap Better 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3797,7 +3797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2678117731659854696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3828,7 +3828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8088132171650103652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3858,7 +3858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7050691035038966810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3890,7 +3890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217252906902907944}
   - component: {fileID: 6702150326240465593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4004,7 +4004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2680089145128524039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4034,7 +4034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 28397407259424674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.thumb.02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4065,7 +4065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5243159382745656811}
   - component: {fileID: 4376321824320285937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Helmet Catcher 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4179,7 +4179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746439502715268567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.arm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4211,7 +4211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781958390731440328}
   - component: {fileID: 7564662505554442749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Cap Better 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4325,7 +4325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6014342437607357959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4356,7 +4356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401986669206379957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4390,7 +4390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300022826897350726}
   - component: {fileID: 3494837907664623750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Better 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4510,7 +4510,7 @@ GameObject:
   - component: {fileID: 8774579787611451688}
   - component: {fileID: 8774579787611451695}
   - component: {fileID: 8774579787611451694}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4579,7 +4579,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: bd12e1068d6590a49abbbbc91d81b139, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -4627,8 +4627,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63be235102e2cf4fac4ed4edb21e667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  runningTime: 0
+  moveSpeed: 0.7
   playerAnimator: {fileID: 2931566805795426336}
+  isTouch: 0
+  isDead: 0
+  lever: {fileID: 0}
+  GM: {fileID: 0}
 --- !u!114 &8774579787611451695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4673,7 +4678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7610900187636166414}
   - component: {fileID: 5842595527259735923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Pitcher Cap 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4787,7 +4792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093640288571845983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4818,7 +4823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151713505686163908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.fingers.02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,7 +4855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3734176070079903320}
   - component: {fileID: 8383912891579242894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Better 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4964,7 +4969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7006931545797406940}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DEF.arm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4996,7 +5001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309902469937853728}
   - component: {fileID: 24607923070295178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Man Catcher 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5160,7 +5165,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7948239642328746294, guid: fdd6cfa70e67a454d99ffbcfc33c7fab, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3875185957211204712, guid: fdd6cfa70e67a454d99ffbcfc33c7fab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fdd6cfa70e67a454d99ffbcfc33c7fab, type: 3}
 --- !u!4 &6646320232367328506 stripped
 Transform:

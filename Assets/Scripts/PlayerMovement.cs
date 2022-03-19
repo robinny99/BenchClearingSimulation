@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float runningTime;
-    
+
     private float hAxis;
     private float vAxis;
 
@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isTouch = false;
     public bool isDead;
 
+    public Lever lever;
+
+    public GameObject GM;
     private void Start()
     {
         playerAnimator = GetComponentInChildren<Animator>();
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Turn();
                 PlayerAnimation();
+                Move();
             }
             
 
@@ -48,6 +52,31 @@ public class PlayerMovement : MonoBehaviour
         moveVec = new Vector3(0, 0, 0).normalized;
         transform.position += moveVec;
     }
+    
+    void Move()
+        {
+    
+            if (GM.GetComponent<gameManager>().isMobile)
+            {
+                if(lever == null)
+                    return;
+    
+    
+                hAxis = lever.xforce;
+                vAxis = lever.yforce;
+                moveVec = new Vector3(hAxis, 0, vAxis).normalized;
+                transform.position += moveVec * moveSpeed * Time.deltaTime;
+            }
+            else
+            {
+                hAxis = Input.GetAxis("Horizontal");
+                vAxis = Input.GetAxis("Vertical");
+                moveVec = new Vector3(hAxis, 0, vAxis).normalized;
+                transform.position += moveVec * moveSpeed * Time.deltaTime;
+            }
+    
+    
+        }
 
     void Turn()
     {

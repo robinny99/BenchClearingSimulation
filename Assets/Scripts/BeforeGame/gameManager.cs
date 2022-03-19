@@ -8,7 +8,7 @@ public class gameManager : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject player;
-
+    public bool isMobile;
     private void Start()
     {
         FadeIn();

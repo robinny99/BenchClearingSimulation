@@ -13,11 +13,8 @@ public class Lever : MonoBehaviour , IBeginDragHandler, IDragHandler, IEndDragHa
     [SerializeField, Range(10f, 150f)] 
     private float leverRange;
     
-    private Vector2 inputDirection;
-    private bool isInput;
-
-    [SerializeField] 
-    private TPSController controller;
+    public float xforce;
+    public float yforce;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -31,8 +28,8 @@ public class Lever : MonoBehaviour , IBeginDragHandler, IDragHandler, IEndDragHa
 
         lever.anchoredPosition = clampedDir;
 
-        ControlJoystickLever(eventData);
-        isInput = true;
+        xforce = inputDir.normalized.x;
+        yforce = inputDir.normalized.y;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -43,37 +40,14 @@ public class Lever : MonoBehaviour , IBeginDragHandler, IDragHandler, IEndDragHa
 
         lever.anchoredPosition = clampedDir;
 
-        ControlJoystickLever(eventData);
-        isInput = false;
-    }
-
-    public void ControlJoystickLever(PointerEventData eventData)
-    {
-        var inputDir = eventData.position - rectTransform.anchoredPosition;
-        
-        var clampedDir = inputDir.magnitude < leverRange ? inputDir : inputDir.normalized * leverRange;
-
-        lever.anchoredPosition = clampedDir;
-        inputDirection = clampedDir / leverRange;
+        xforce = inputDir.normalized.x;
+        yforce = inputDir.normalized.y;
     }
     
     public void OnEndDrag(PointerEventData eventData)
     {
+        xforce = 0;
+        yforce = 0;
         lever.anchoredPosition = Vector2.zero;
-        controller.Move(Vector2.zero);
-    }
-
-    private void InputControlVector()
-    {
-        controller.Move(inputDirection);
-        Debug.Log(inputDirection.x + " / " + inputDirection.y);
-    }
-
-    private void Update()
-    {
-        if (isInput)
-        {
-            InputControlVector();
-        }
     }
 }

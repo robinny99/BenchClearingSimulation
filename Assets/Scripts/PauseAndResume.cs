@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PauseAndResume : MonoBehaviour
 {
-    public void Pause()
-    {
-        Time.timeScale = 1;
-    }
+    
     
     public void Resume()
     {
