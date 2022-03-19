@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                Move();
                 Turn();
                 PlayerAnimation();
             }
@@ -48,17 +47,6 @@ public class PlayerMovement : MonoBehaviour
     {
         moveVec = new Vector3(0, 0, 0).normalized;
         transform.position += moveVec;
-    }
-
-    void Move()
-    {
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized;
-        transform.position += moveVec * moveSpeed * Time.deltaTime;
-        hAxis = Input.GetAxis("Horizontal");
-        vAxis = Input.GetAxis("Vertical");
-
-       
-
     }
 
     void Turn()
