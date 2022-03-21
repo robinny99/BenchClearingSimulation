@@ -15,17 +15,6 @@ public class RedBatterController : MonoBehaviour
     private Vector3 moveVec;
 
     private bool isAttack = true;
-    
-    //public Transform spawner;
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "whiteBat")
-        {
-            redBatter.SetTrigger("IsDead");
-            transform.Translate(Vector3.zero);
-            trig = false;
-        }
-    }
 
     private void Update()
     {

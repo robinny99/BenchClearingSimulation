@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] Text startPauseText;
-    private bool pauseActive = false;
+    public bool pauseActive = false;
 
     public void pauseBtn()
     {

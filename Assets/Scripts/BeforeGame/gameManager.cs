@@ -8,19 +8,23 @@ public class gameManager : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject player;
+    public GameObject SpawnJudge;
     public bool isMobile;
     private void Start()
     {
         FadeIn();
+        SpawnJudgeOff();
     }
 
     private void Update()
     {
         InGameStart();
+
+        InGameEnd();
     }
     
     //-------------------------------------------------------------------------------------------------------------------------------------------
-
+    
     public void FadeOut()
     {
         StartCoroutine(FadeOutCo());
@@ -30,7 +34,19 @@ public class gameManager : MonoBehaviour
     {
         StartCoroutine(FadeInCo());
     }
-    
+
+    public void InGameEnd()
+    {
+        if (player != null)
+        {
+            if (player.GetComponent<PlayerMovement>().isDead)
+            {
+                JoysticOff();
+                SpawnJudgeOff();
+            }   
+        }
+    }
+
     public void GameOver()
     {
         if (player != null)
@@ -40,6 +56,12 @@ public class gameManager : MonoBehaviour
                 FadeOut();
             }
         }
+    }
+
+    void JoysticOff()
+    {
+        gameObject.GetComponent<JoystickOnOff>().JoystickOff();
+        Debug.Log("GAME OVER");
     }
 
     void InGameStart()
@@ -57,6 +79,10 @@ public class gameManager : MonoBehaviour
     {
         LoadPauseB();
         LoadDistanceRecord();
+        
+        gameObject.GetComponent<JoystickOnOff>().JoystickOn();
+        
+        SpawnJudgeOn();
     }
 
     public void SceneChange()
@@ -78,7 +104,7 @@ public class gameManager : MonoBehaviour
     {
         gameObject.GetComponent<Fade>().FadeOut();
         Debug.Log("FADEOUT START");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("InGameBCS 1");
     }
     
@@ -88,6 +114,16 @@ public class gameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         gameObject.GetComponent<Fade>().FadeIn();
     }
+
+    void SpawnJudgeOn()
+    {
+        SpawnJudge.GetComponent<SpawnRandaom>().enabled  = true;
+        Debug.Log("Spawn Judge");
+    }
     
-    
+    void SpawnJudgeOff()
+    {
+        SpawnJudge.GetComponent<SpawnRandaom>().enabled = false;
+        Debug.Log("Spawn Judge.Fin");
+    }
 }

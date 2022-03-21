@@ -111,7 +111,7 @@ public class EnemyController : MonoBehaviour
     IEnumerator Disappear()
     {
         yield return new WaitForSeconds(3f);
-        
+        gameObject.SetActive(false);
         yield break;
         
     }
