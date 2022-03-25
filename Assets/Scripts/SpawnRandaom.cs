@@ -54,7 +54,7 @@ public class SpawnRandaom : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 20f, 1); //3초후 부터, SpawnEnemy함수를 1초마다 반복해서 실행 시킵니다.
+        InvokeRepeating("SpawnEnemy", 20f, 10); //3초후 부터, SpawnEnemy함수를 1초마다 반복해서 실행 시킵니다.
     }
 }
 

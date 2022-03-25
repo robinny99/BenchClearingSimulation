@@ -85,10 +85,10 @@ public class gameManager : MonoBehaviour
         SpawnJudgeOn();
     }
 
-    public void SceneChange()
-    {
-        SceneManager.LoadScene("InGameBCS 2");
-    }
+    //public void SceneChange()
+    //{
+       // SceneManager.LoadScene("InGameBCS 2");
+    //}
 
     void LoadPauseB()
     {

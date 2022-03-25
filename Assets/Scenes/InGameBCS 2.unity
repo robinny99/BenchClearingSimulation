@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballCamera: {fileID: 963194227}
-  ballVelocity: 0.3
+  ballVelocity: 0.25
   targetPosition: {fileID: 432040826}
 --- !u!54 &868322942
 Rigidbody:
